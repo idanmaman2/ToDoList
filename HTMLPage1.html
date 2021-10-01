@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var allP = [];
+        var allB = [];
+        var i = 0; 
+        function function1() {
+            alert("are you sure you want to leave this page ");
+        }
+        function myFunction() {
+            var para = document.createElement("P");
+            var para2 = document.createElement("div");
+            var para3 = document.createElement("button");
+            var para4 = document.createElement("mySpan");
+            var para5 = document.createElement("mySpan");
+            para3.style.margin="33px"
+            para5.setAttribute('class', "fa fa-plus-square-o 2x"); 
+            para3.style.width = '10%' ;
+            para3.style.height = '140px' ;
+            para2.style.width = "42%";
+  
+            para.innerHTML = "This is a paragraph."+(++i);
+            para.style.color = "red";
+            para.style.fontSize = "xx-large";
+            para2.style.border = "medium solid #0000FF";
+            para3.appendChild(para5);
+            para4.appendChild(para3);
+            para.appendChild(para4);
+            para2.appendChild(para);
+
+            allP.push(para);
+         
+            allB.push(para3);
+      
+          
+            document.getElementById("myDIV").appendChild(para2);
+            allP[0].innerHTML = i;
+
+            var nullpara = document.createElement("div");
+            var nullpara1=document.createElement("P");
+            nullpara.appendChild(nullpara1);
+            document.getElementById("myDIV").appendChild(nullpara);
+
+            
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .newc {
+            position: fixed;
+            background-color: #004de6;
+            height: 58px;
+            width: 58px;
+           
+            left:69%;
+            top:60%;
+      
+            border-radius: 50%;
+        }
+        .maindiv {
+            position: fixed;
+            background-image: linear-gradient(white,aliceblue,aqua,aquamarine );
+            top: 5%;
+            left: 53%;
+            border: double;
+            width: 400px;
+            height: 550px;
+        }
+        .ani {
+            position: fixed;
+            background-color: #004de6;
+            height: 100px;
+            width: 100px;
+            opacity: 0.7;
+            transition: 0.2s;
+            top: 85%;
+            left: 90%;
+            border-radius: 50%;
+        }
+
+            .ani:hover {
+                position: fixed;
+                background-color:darkblue;
+                height:100px;
+                width: 100px;
+                opacity: 0.7;
+                transition: 0.2s;
+                top: 84%;
+                left:89%;
+                border-radius: 50%;
+            }
+    </style>
+</head>
+<body style="background-image: url('https://d3m9l0v76dty0.cloudfront.net/system/photos/3056140/large/25f1be286c711a90706038a81e557b36.jpg'); ">
+    
+    <h3 style=" 
+    
+        font-size:32px;
+    
+    ">Task Box By Chapie inc </h3>
+    
+    <div id="myDIV">
+    
+    </div>
+    <div class="maindiv">
+        <h1>task</h1>
+        <button class="newc"><span style="
+        font-size: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+       align-items: center;
+       position:sticky;
+   " class="fa fa-plus-square-o"></span> </button>
+    </div>
+    <button class="ani" onclick=" myFunction()">
+        <span style="
+        font-size: 2vw;
+        margin-left: auto;
+        margin-right: auto;
+       align-items: center;
+       position:sticky;
+   " class="fa fa-plus-square-o"></span>
+    </button>
+    >
+</body>
+</html>
